@@ -1,157 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Vo nhap</title>
-        <meta charset="UTF-8"/>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                /*box-sizing: border-box;*/
-            }
-            .page {
-
-
-                margin: auto;
-            }
-
-            .content {
-                height: 150vh;
-                text-align: center;
-                background-color: lightsalmon;
-            }
-
-            .ad {
-                height: 100vh;
-                position: relative;
-                /*display: flex;
-                justify-content: center;
-                align-items: center;*/
-                background-image: url(pexels-mads-thomsen-2739013.jpg);
-                background-attachment: fixed;
-                background-size: cover;
-            }
-
-            .test {
-                border: 2px solid red;
-                width: 500px;
-                height: 300px;
-                margin: auto;
-                
-            }
-
-            .test img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-            
-            .text {
-                font-family: "Roboto", sans-serif;
-                color: white;
-                font-size: 2.7em;
-                font-weight: 550;
-                padding: 30px;
-                background-color: rgb(0,0,0,.5) ;
-                max-width:fit-content;
-                position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
- 
-
-            }
-
-            .short {
-                height: 30vh;
-            }
-
-            .ad2 {
-                height: 150vh;
-                background-image: url(pexels-joshua-welch-1624600.jpg);
-                background-attachment: fixed;
-                background-size: cover;
-
-            }
-            .inline {
-                width: 200px;
-                height: 300px;
-            }
-
-            span {
-                width: 500px;
-            }
-
-            .hvt {
-                display: inline-block;
-                font-family: "Roboto", sans-serif;
-                text-transform: uppercase;
-                font-weight: 500;
-                padding: 20px 40px;
-                font-size: 30px;
-                position: relative;
-            }
-
-        .hvt::after {
-            content: "";
-            display: block;
-            
-            margin: auto;
-            width: 0%;
-            height: 2px;
-            background-color: red;
-            
-            transition: .2s ease-in-out;
-        }
-
-        .hvt:hover::after {
-            width: 100%;
-        }
-
-        .fl {
-            display: flex;
-            width: 50vw;
-            height: 500px;
-            margin: auto;
-            border: 1px dashed darkcyan;
-        }
-
-        .item {
-            /*height: 200px;*/
-            width: 100px;
-            background-color: aquamarine;
-            flex: auto;
-            margin: 10px 20px;
-        }
-
-        .item--high {
-            height: 300px;
-            
-        }
-
-        </style>
-    </head>
-    <body>
-               
-        <div class="page">
-            <div class="content">
-                <div class="test">
-                    <p class="hvt">Some hover text</p>
-                    
-                </div>
-                <div class="fl">
-                    <div class="item">a</div>
-                    <div class="item">b</div>
-                    <div class="item item--high">c</div>
-                </div>
-            </div>
-
-
-            <div class="ad">
-                <div class="text">INSERT INSPRING TEXT</div>
-            </div>
-            <div class="content short">def</div>
-            <div class="ad2"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2137715c67.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="light">
+        <div class="header">
+            <a href="#" class="header__logo"><strong>Sang</strong> Tran Minh</a>
+            <ul class="header__menu">
+                <li class="item"><a href="#">Work</a></li>
+                <li class="item"><a href="#">Notes</a></li>
+                <li class="item"><a href="#">Contact</a></li>
+            </ul>
+            <ul class="header__social">
+                <li class="item"><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                <li class="item"><a href="#"><i class="fa-brands fa-github"></i>Github</a></li>
+            </ul>
+            <div class="header__mail"><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
         </div>
-    </body>
+    </section>
+    <section class="light">
+        <div class="hero">
+            <div class="hero__info">
+                <h3 class="sub">Front-end Developer</h3>
+                <h1 class="title">Hello, World!<br>My name is <span class="special">Marshall</span>.</h1>
+                <p class="desc">I'm a self-taught front-end developer. I love creating beautiful websites but I ain't got a designer just yet.</p>
+                <a href="#" class="btn">SEE MORE!</a>
+                <p class="note"><em>Công trình đang thi công, không phận sự miễn vào!</em></p>
+            </div>
+            <div class="hero__image">
+                <img src="hero.jpg" alt="this is me" srcset="" >
+                <div class="square"></div>
+            </div>
+        </div>
+    </section>
+    <section class="lighter">
+        <div class="project"></div>
+    </section>
+</body>
 </html>

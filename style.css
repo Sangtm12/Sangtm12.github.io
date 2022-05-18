@@ -1,0 +1,274 @@
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    color: white;
+}
+
+body {
+    margin-bottom: 10rem;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100vw;
+    font-size: 1.3rem;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+strong {
+    font-weight: 600;
+}
+.light {
+    background-color: #2d2e32;
+}
+
+.lighter {
+    background-color: #333438;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn {
+    display: block;
+    max-width: fit-content;
+    background-color: transparent;
+    color:#e5d91c;
+    font-size: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e5d91c;
+}
+
+.btn:active {
+    background-color: #e5d91c;
+    color: #2d2e32;
+    font-weight: 500;
+}
+
+.btn::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    background-color: #e5d91c;
+    transition: width .3s;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.btn:active::after {
+    background-color: #2d2e32;
+}
+
+
+/* ||header */
+
+
+.header{
+    height: 10rem;
+    padding: 0 4rem;
+    max-width: 124rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 9rem;
+}
+
+.header__logo::after {
+    content: "";
+    display: block;
+    height: 0.4rem;
+    width: 2.2rem;
+    background-color: #e5d91c;
+    position: relative;
+    left: 15.7rem;
+    top: -.7rem;
+}
+
+.header__menu {
+    display: flex;
+    font-weight: 400;
+}
+
+.header__menu > .item {
+    margin: 0 2rem;
+}
+
+.header__menu a:link, 
+.header__menu a:visited, 
+.header__menu a:focus {
+        text-decoration: none;
+        color: #fff;
+}
+
+.header__menu a:hover {
+    color: #e5d91c;
+}
+
+.header__menu a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #e5d91c;
+    transition: width .3s;
+}
+
+.header__menu a:hover::after {
+    width: 100%;
+}
+
+
+
+.header__social {
+    margin-left: auto;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__social .item {
+    margin: 0 2rem;
+    font-size: 1rem;
+}
+
+
+.header__social .item i {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+}
+
+.header__mail {
+    background-color: #333438;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.header__mail a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header__mail a:hover {
+    color: #e5d91c;
+}
+
+.header__mail a i {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* || hero section */
+
+.hero {
+    height: 75rem;
+    max-width: 124rem;
+    padding: 0 4rem;
+    padding-top: 5rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero__info {
+    padding-left: 8rem;
+}
+
+.hero__info .sub {
+    background-color: #e5d91c;
+    max-width: fit-content;
+    padding: .5rem;
+    font-weight: 700;
+    color:#2d2e32;
+    border-radius: 3px;
+    margin-top: 10rem;
+}
+
+.hero__info .title {
+    margin-top: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.special {
+    color:#e5d91c;
+}
+
+.hero__info .desc {
+    line-height: 2;
+    max-width: 80%;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.hero__info .btn {
+    margin-top: 7rem;
+}
+
+.hero__info .note {
+    margin-top: 2rem;
+}
+
+.hero__image {
+
+    position: relative;
+}
+
+.hero__image img {
+    display: block;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1;
+    transition: transform .3s ;
+}
+
+.hero__image img:hover {
+    transform: translate(-2%, 2%);
+}
+
+.hero__image .square {
+    width: 40rem;
+    border: 7px solid #e5d91c;
+    height: 48.5rem;
+    position: absolute;
+    top: 10%;
+    left: 12.5%;
+    z-index: 0;
+    transition: transform .3s;
+}
+
+.hero__image img:hover ~ .square {
+    transform: translate(6.8%, -7%);
+}
+
+/* ||project section */
+
+.project {
+    height: 80rem;
+}
+
