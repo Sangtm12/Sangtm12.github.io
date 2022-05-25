@@ -192,11 +192,29 @@ span.special {
 }
 
 .hero p.note {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .hero__image {
-    margin-top: 5rem;
+    position: relative;
+}
+
+.hero__image img {
+    display: block;
+    width: 80%;
+    margin: 14rem auto 5rem auto;
+    z-index: 1;
+}
+
+.hero__image .square {
+    border: .6rem solid #e5d91c;
+    position: absolute;
+    height: 39rem;
+    width: 80%;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-54%);
+    z-index: 0;
 }
 
 
