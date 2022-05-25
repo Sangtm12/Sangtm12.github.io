@@ -82,6 +82,10 @@ a {
     background-color: #2d2e32;
 }
 
+:root {
+    --primary: #e5d91c;
+}
+
 
 /* ||header */
 
@@ -98,7 +102,7 @@ a {
 
 .header__logo::after {
     content: "";
-    background-color: #e5d91c;
+    background-color: var(--primary);
     width: 2.5rem;
     height: .5rem;
     display: block;
@@ -113,7 +117,7 @@ a {
 .hero {
     margin: 10rem auto 0 auto;
     display: grid;
-    max-width: 55rem;
+    max-width: 65rem;
     padding: 0 5rem;
 }
 
@@ -142,7 +146,7 @@ a {
 .flipcard__front,
 .flipcard__back {
     color: #2d2e32;
-    background-color: #e5d91c;
+    background-color: var(--primary);
     border-radius: .3rem;
     position: absolute;
     width: 100%;
@@ -170,7 +174,7 @@ a {
 }
 
 span.special {
-    color: #e5d91c;
+    color: var(--primary);
 }
 
 .hero .desc {
@@ -199,7 +203,7 @@ span.special {
 }
 
 .hero__image .square {
-    border: .8rem solid #e5d91c;
+    border: .8rem solid var(--primary);
     position: absolute;
     height: 44.8rem;
     width: 37rem;
@@ -207,6 +211,80 @@ span.special {
     left: 50%;
     transform: translateX(-54%);
 }
+
+
+
+/* || info section */
+
+.info {
+    display: grid;
+    max-width: 65rem;
+    margin: 5rem auto 7rem auto;
+    padding: 0 5rem;
+}
+
+.skill__list {
+    margin-bottom: 5rem;
+    position: relative; /* to position .measure */
+    display: flex;
+    flex-flow: row wrap;
+    transition: transform .3s;
+}
+
+.skill__list:hover {
+    transform: scale(115%, 115%);
+}
+
+.skill__desc {
+    height: fit-content;
+    width: 100%;
+    align-self: flex-end;
+    padding-top: 3.5rem;
+    color: lightgrey;
+}
+
+.skill__name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary);
+    align-self: baseline;
+}
+
+.skill__point {
+    margin-left: auto;
+    margin-right: 1rem;
+    font-weight: 500;
+    align-self: baseline;
+}
+
+.skill__list .measure {
+    height: .8rem;
+    border: 1px solid var(--primary);
+    position: absolute;
+    top: 3.7rem;
+}
+
+.total {
+    width: 100%;
+}
+
+.point {
+    background-color: var(--primary);
+}
+
+.skill1 {
+    width: calc(100% / 5 * 3.5);
+}
+
+.skill2 {
+    width: calc(100% / 5 * 0.5);
+}
+
+.skill3 {
+    width: calc(100% / 5 * 4.5);
+}
+
+
 
 
 
@@ -334,7 +412,12 @@ span.special {
 
     .hero {
         max-width: 124rem;
-        grid-template-columns: 40% 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+
+    .info {
+        max-width: 124rem;
     }
 
 }
