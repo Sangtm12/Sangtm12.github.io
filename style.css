@@ -108,17 +108,69 @@ a {
 }
 
 
+/* ||section hero */
 
-
-
-/* lol fuck off */
-.hero img {
-    display: none;
+.hero {
+    border: 1px solid red;
+    display: grid;
 }
 
 
-/* small screen */
 
+
+
+
+
+
+
+
+.flipcard {
+    height: 3rem;
+    width: 19rem;
+    background-color: transparent;
+    perspective: 50rem;
+}
+
+.flipcard__inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    transition: transform .3s;
+    transform-style: preserve-3d;
+}
+
+.flipcard:hover .flipcard__inner {
+    transform: rotateY(180deg);
+}
+
+.flipcard__front,
+.flipcard__back {
+    color: #2d2e32;
+    background-color: #e5d91c;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flipcard__back {
+    transform: rotateY(180deg)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* phone */
 @media screen and (max-width: 749px) {
 
     .header .main {
@@ -135,6 +187,7 @@ a {
     
     .header label {
         margin-left: auto;
+        padding: 0 1rem;
         font-size: 2rem;
         color: #e5d91c;
     }
@@ -204,6 +257,17 @@ a {
         left: 50%;
         transform: translate(-50%, -50%)
     }
+/* section hero */
+    .hero {
+        max-width: 55rem;
+        margin: 10rem auto 0 auto;
+        padding: 0 5rem;
+    }
+
+
+
+
+
 
 
 
