@@ -114,6 +114,8 @@ a {
     margin: 10rem auto 0 auto;
     border: 1px solid red;
     display: grid;
+    max-width: 55rem;
+    padding: 0 5rem;
 }
 
 
@@ -126,10 +128,11 @@ a {
 
 
 .flipcard {
-    height: 3rem;
+    height: 3.6rem;
     width: 19rem;
     background-color: transparent;
     perspective: 50rem;
+    margin-top: 15rem;
 }
 
 .flipcard__inner {
@@ -159,7 +162,8 @@ a {
 }
 
 .flipcard p {
-    line-height: 3rem;
+    line-height: 3.6rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
@@ -169,7 +173,7 @@ a {
 }
 
 .hero .title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     margin-top: 3rem;
 }
@@ -184,12 +188,19 @@ span.special {
 }
 
 .hero a.btn {
-    margin-top: 5rem;
+    margin-top: 12rem;
 }
 
 .hero p.note {
     margin-top: 2rem;
 }
+
+.hero__image {
+    margin-top: 5rem;
+}
+
+
+
 
 
 
@@ -285,33 +296,11 @@ span.special {
         left: 50%;
         transform: translate(-50%, -50%)
     }
-/* section hero */
-    .hero {
-        max-width: 55rem;
-        padding: 0 5rem;
-    }
-
-    .flipcard {
-        margin-top: 5rem;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
 
-/* medium screen */
+/* tablets */
 
 @media screen and (min-width: 750px){
     html {
