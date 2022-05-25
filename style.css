@@ -202,19 +202,19 @@ span.special {
 .hero__image img {
     display: block;
     width: 80%;
-    margin: 14rem auto 5rem auto;
+    margin: 14rem auto 15rem auto;
+    position: relative;
     z-index: 1;
 }
 
 .hero__image .square {
     border: .6rem solid #e5d91c;
     position: absolute;
-    height: 39rem;
+    height: 38.5rem;
     width: 80%;
-    top: 15rem;
+    top: 15.5rem;
     left: 50%;
     transform: translateX(-54%);
-    z-index: 0;
 }
 
 
