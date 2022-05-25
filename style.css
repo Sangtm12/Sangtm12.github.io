@@ -112,7 +112,6 @@ a {
 
 .hero {
     margin: 10rem auto 0 auto;
-    border: 1px solid red;
     display: grid;
     max-width: 55rem;
     padding: 0 5rem;
