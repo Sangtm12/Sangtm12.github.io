@@ -118,14 +118,6 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
 .flipcard {
     height: 3.6rem;
     width: 19rem;
@@ -200,17 +192,17 @@ span.special {
 
 .hero__image img {
     display: block;
-    width: 80%;
+    width: 37rem;
     margin: 14rem auto 15rem auto;
     position: relative;
     z-index: 1;
 }
 
 .hero__image .square {
-    border: .6rem solid #e5d91c;
+    border: .8rem solid #e5d91c;
     position: absolute;
-    height: 38.5rem;
-    width: 80%;
+    height: 44.8rem;
+    width: 37rem;
     top: 15.5rem;
     left: 50%;
     transform: translateX(-54%);
