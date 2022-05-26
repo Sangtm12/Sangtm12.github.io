@@ -333,7 +333,7 @@ span.special {
 }
 
 .about__contact th i {
-    margin: 0 1.5rem;
+    margin: 0 1.5rem 0 4.5rem;
 }
 
 .about__contact td::before {
@@ -485,6 +485,9 @@ span.special {
         gap: 5rem;
     }
 
+    .about__contact th i {
+        margin: 0 1.5rem 0 2rem;
+    }
 }
 /* large screen */
 @media screen and (min-width: 960px) {
