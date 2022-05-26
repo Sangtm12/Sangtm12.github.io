@@ -223,6 +223,10 @@ span.special {
     padding: 0 5rem;
 }
 
+.info__skill {
+    width: 100%;
+}
+
 .skill__list {
     margin-bottom: 5rem;
     position: relative; /* to position .measure */
@@ -284,9 +288,58 @@ span.special {
     width: calc(100% / 5 * 4.5);
 }
 
+/* info about */
 
+.about__title {
+    font-size: 3rem;
+    font-weight: 700;
+}
 
+.about__title::after {
+    content: "";
+    display: block;
+    background-color: var(--primary);
+    width: 3rem;
+    height: .7rem;
+    position: relative;
+    left: 15.5rem;
+    top: -.7rem;
+}
 
+.about__desc {
+    margin-top: 3rem;
+    color: lightgrey;
+}
+
+.about__contact {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.about__contact thead, tbody {
+    float: left;
+    width: 50%;
+}
+
+.about__contact th, td {
+    display: block;
+    margin-bottom: 1rem; 
+}
+
+.about__contact th {
+    text-align: left;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.about__contact th i {
+    margin: 0 1.5rem;
+}
+
+.about__contact td::before {
+    content: ":";
+    padding-right: .5rem;
+}
 
 
 
@@ -384,6 +437,16 @@ span.special {
         transform: translate(-50%, -50%)
     }
 
+    /* info about */
+
+    .about__title {
+        margin-top: 8rem;
+    }
+
+
+
+
+
 }
 
 
@@ -418,6 +481,8 @@ span.special {
 
     .info {
         max-width: 124rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
     }
 
 }
