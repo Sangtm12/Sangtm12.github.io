@@ -330,11 +330,11 @@ span.special {
     text-align: left;
     color: var(--primary);
     font-weight: 500;
+    width: 20rem;
+    white-space: nowrap;
 }
 
-.about__contact th i {
-    margin: 0 1.5rem 0 4.5rem;
-}
+
 
 .about__contact td::before {
     content: ":";
@@ -442,7 +442,10 @@ span.special {
     .about__title {
         margin-top: 8rem;
     }
-
+    
+    .about__contact th i {
+        padding: 0 1.5rem 0 30%;
+    }
 
 
 
