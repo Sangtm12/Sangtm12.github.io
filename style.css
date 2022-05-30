@@ -370,12 +370,17 @@ span.special {
 .exp__grid {
     display: grid;
     position: relative; /* to position the yellow line */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 1fr;
     margin-top: 5rem;
+    gap: 3rem;
 }
 
 .the-yellow-line {
     position: absolute;
+    background-color: var(--primary);
+    height: 90%;
+    width: .7rem;
+    left: 38%;
 }
 
 .exp__year {
@@ -391,8 +396,26 @@ span.special {
 }
 
 .exp__place {
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }
+
+.exp__place::before {
+    content: "";
+    background-color: var(--primary);
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 37.3%;
+    transition: transform .15s;
+    margin-top: .7rem;
+}
+
+.exp__place:hover::before {
+    transform: scale(170%, 170%);
+}
+
 
 .place__title {
     font-size: 2.5rem;
@@ -410,7 +433,7 @@ span.special {
 }
 
 .task__list {
-    position: relative; /* to position yellow dots */
+    position: relative; /* to position yellow bullets */
 }
 .task__list::before {
     content: "";
@@ -423,7 +446,10 @@ span.special {
     left: -1rem;
 }
 
-
+.task__list a {
+    text-decoration: underline;
+    color: var(--primary);
+}
 
 
 
@@ -570,6 +596,7 @@ span.special {
     .about__contact th i {
         margin: 0 1.5rem 0 2rem;
     }
+
 }
 /* large screen */
 @media screen and (min-width: 960px) {
