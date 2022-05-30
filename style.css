@@ -451,7 +451,22 @@ span.special {
     color: var(--primary);
 }
 
+/* section contact */
 
+.contact {
+    max-width: 70rem;
+    margin: auto;
+    padding: 15rem 5rem;
+}
+
+.contact__me {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.grid-ctn {
+    margin-top: 3rem;
+}
 
 
 /* phone */
@@ -552,9 +567,66 @@ span.special {
         padding: 0 1.5rem 0 30%;
     }
 
+    /* section contact */
 
+    .contact__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 6%;
+    }
 
+    .contact__item {
+        flex: 1;
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        border-radius: 3px;
+        height: 10rem;
+    }
 
+    .contact__item a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__item i {
+        font-size: 3rem;
+        margin: 2.5rem 0 .5rem 0;
+    }
+
+    .contact__desc {
+        margin-top: 3rem;
+        color: lightgrey;
+    }
+
+    .contact form * {
+        display: block;
+        color: lightgrey;
+    }
+
+    .contact label {
+        margin: 1.5rem 0 .3rem 0;
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: .7rem;
+        background-color: #2d2e32;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        resize: none;
+        width: 100%;
+    }
+
+    .contact button {
+        margin-top: 3rem;
+        max-width: fit-content;
+        background-color: transparent;
+        color:#e5d91c;
+        font: 2rem "Montserrat", sans-serif;
+        padding: 1.5rem;
+        border: 1px solid #e5d91c;
+    }
 }
 
 
@@ -602,3 +674,10 @@ span.special {
 @media screen and (min-width: 960px) {
 
 }
+
+/* họ muốn xây lên một tòa tháp mới cao hơn mọi thứ xung quanh 
+nhưng em thấy đấy vẫn chỉ là một bãi lau sậy màu xanhhhhhhhh
+triển lãm giảng võ
+triển lãm giảng võ 
+triển lãm giảng võ đã bị đập tan từ lâu  */
+
