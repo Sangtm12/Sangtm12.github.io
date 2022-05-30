@@ -341,8 +341,87 @@ span.special {
     padding-right: .5rem;
 }
 
+/* ||section exp */
+
+.exp {
+    display: grid;
+    max-width: 70rem;
+    margin: 14rem auto 7rem auto;
+    padding: 0 5rem;
+}
+
+.exp__title {
+    font-size: 3rem;
+    font-weight: 700;
+    max-width: fit-content;
+}
 
 
+.underline::after {
+    content: "";
+    background-color: var(--primary);
+    display: inline-block;
+    width: 3rem;
+    height: .7rem;
+    position: relative;
+    top: 1rem;
+}
+
+.exp__grid {
+    display: grid;
+    position: relative; /* to position the yellow line */
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+}
+
+.the-yellow-line {
+    position: absolute;
+}
+
+.exp__year {
+    background-color: var(--primary);
+    width: 12rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #25262a;
+    font-weight: 700;
+    border-radius: 3px;
+    justify-self: center;
+}
+
+.exp__place {
+    margin-bottom: 5rem;
+}
+
+.place__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.place__desc {
+    font-size: 1.7rem;
+    color: lightgrey;
+}
+
+.task {
+    margin: 1.5rem 0 0 1rem;
+    color: lightgrey;
+}
+
+.task__list {
+    position: relative; /* to position yellow dots */
+}
+.task__list::before {
+    content: "";
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    background-color: var(--primary);
+    position: absolute;
+    top: .8rem;
+    left: -1rem;
+}
 
 
 
