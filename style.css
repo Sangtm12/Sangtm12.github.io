@@ -109,13 +109,39 @@ a {
     position: relative;
     left: 16rem;
     top: -.5rem;
+    transition: transform 1s;
+}
+
+.header__logo:hover::after {
+    transform: rotate(720deg);
+}
+
+.header__mail a {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #333438;
+    position: relative;
+}
+
+.header__mail a i {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.header__mail a:hover {
+    color: var(--primary);
 }
 
 
 /* ||section hero */
 
 .hero {
-    margin: 10rem auto 0 auto;
+    margin: 10rem auto 15rem auto;
     display: grid;
     max-width: 65rem;
     padding: 0 5rem;
@@ -180,6 +206,7 @@ span.special {
 .hero .desc {
     color: lightgray;
     margin-top: 3rem;
+    width: 75%;
 }
 
 .hero a.btn {
@@ -191,27 +218,25 @@ span.special {
 }
 
 .hero__image {
-    position: relative;
+    position: relative; /* to position yellow square */
 }
 
 .hero__image img {
     display: block;
     width: 37rem;
-    margin: 14rem auto 15rem auto;
+    margin: 17rem auto 0 auto;
     position: relative;
     z-index: 1;
 }
 
 .hero__image .square {
     border: .8rem solid var(--primary);
-    position: absolute;
     height: 44.8rem;
     width: 37rem;
-    top: 15.5rem;
-    left: 50%;
-    transform: translateX(-54%);
-}
-
+    margin: -42.5rem auto 0 auto;
+    position: relative;
+    left: -2rem;
+} 
 
 
 /* || info section */
@@ -304,6 +329,11 @@ span.special {
     position: relative;
     left: 15.5rem;
     top: -.7rem;
+    transition: transform 1s;
+}
+
+.about__title:hover::after {
+    transform: rotate(720deg);
 }
 
 .about__desc {
@@ -323,7 +353,7 @@ span.special {
 
 .about__contact th, td {
     display: block;
-    margin-bottom: 1rem; 
+    margin-bottom: 2rem; 
 }
 
 .about__contact th {
@@ -346,8 +376,8 @@ span.special {
 .exp {
     display: grid;
     max-width: 70rem;
-    margin: 14rem auto 7rem auto;
-    padding: 0 5rem;
+    margin: 0 auto 7rem auto;
+    padding: 14rem 5rem 0 5rem;
 }
 
 .exp__title {
@@ -355,6 +385,7 @@ span.special {
     font-weight: 700;
     max-width: fit-content;
 }
+
 
 
 .underline::after {
@@ -365,6 +396,12 @@ span.special {
     height: .7rem;
     position: relative;
     top: 1rem;
+    margin-right: -3rem; /* to prevent from breaking without text breaking */
+    transition: transform 1s;
+}
+
+.exp__title:hover .underline::after {
+    transform: rotate(720deg);
 }
 
 .exp__grid {
@@ -451,7 +488,7 @@ span.special {
     color: var(--primary);
 }
 
-/* section contact */
+/* ||section contact */
 
 .contact {
     max-width: 70rem;
@@ -468,8 +505,55 @@ span.special {
     margin-top: 3rem;
 }
 
+.contact__item {
+    color: var(--primary);
+    height: 10rem;
+}
 
-/* phone */
+.contact__item a {
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__item i {
+    font-size: 3rem;
+}
+
+.contact form * {
+    display: block;
+    color: lightgrey;
+}
+
+.contact__desc {
+    color: lightgrey;
+}
+
+.contact input,
+.contact textarea {
+    padding: .7rem;
+    background-color: #2d2e32;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    resize: none;
+    width: 100%;
+}
+
+.contact button {
+    margin-top: 3rem;
+    max-width: fit-content;
+    background-color: transparent;
+    color: var(--primary);
+    font: 2rem "Montserrat", sans-serif;
+    padding: 1.5rem;
+    border: 1px solid var(--primary);
+}
+
+
+/* phone and tablets */
 @media screen and (max-width: 749px) {
 
     .header .main {
@@ -534,29 +618,6 @@ span.special {
         padding-right: .5rem;
     }
 
-    /* .header__mail {
-        width: 7rem;
-        height: 7rem;
-        border: 1px solid red;
-    } */
-
-    .header__mail a {
-        display: block;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        background-color: darkgrey;
-        position: relative;
-    }
-
-    .header__mail a i {
-        font-size: 2rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%)
-    }
-
     /* info about */
 
     .about__title {
@@ -577,64 +638,33 @@ span.special {
 
     .contact__item {
         flex: 1;
-        color: var(--primary);
-        border: 1px solid var(--primary);
-        border-radius: 3px;
-        height: 10rem;
     }
 
-    .contact__item a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
 
     .contact__item i {
-        font-size: 3rem;
         margin: 2.5rem 0 .5rem 0;
     }
 
     .contact__desc {
         margin-top: 3rem;
-        color: lightgrey;
     }
 
-    .contact form * {
-        display: block;
-        color: lightgrey;
-    }
+
 
     .contact label {
         margin: 1.5rem 0 .3rem 0;
     }
-
-    .contact input,
-    .contact textarea {
-        padding: .7rem;
-        background-color: #2d2e32;
-        border: 1px solid lightgrey;
-        border-radius: 3px;
-        resize: none;
-        width: 100%;
-    }
-
-    .contact button {
-        margin-top: 3rem;
-        max-width: fit-content;
-        background-color: transparent;
-        color:#e5d91c;
-        font: 2rem "Montserrat", sans-serif;
-        padding: 1.5rem;
-        border: 1px solid #e5d91c;
-    }
 }
 
 
-/* tablets */
+/* medium desktop */
 
 @media screen and (min-width: 750px){
-    html {
-        font-size: 10px;
+
+    .header {
+        max-width: 124rem;
+        margin: 0 auto;
     }
 
     .header input,
@@ -649,31 +679,205 @@ span.special {
         align-items: center;
     }
 
+    .header__logo {
+        margin-right: 7rem;
+    }
+
     .header .main * {
         display: inline-block;
     }
 
+    .header .main {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__menu a {
+        padding-right: 3rem;
+    }
+
+    .header__menu a:hover {
+        color: var(--primary);
+    }
+
+    .header__menu a::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 0;
+        margin: auto;
+        transition: width .3s;
+        background-color: var(--primary);
+    }
+
+    .header__menu a:hover::after {
+        width: 100%;
+    }
+
+    .header__social {
+        margin-left: auto;
+        padding-right: 5rem;
+    }
+
+    .header__social li:first-child a {
+        padding-right: 3rem;
+    }
+
+    .header__social i {
+        padding-right: .5rem;
+    }
+
+
+
+
+    /* section hero */
+
     .hero {
         max-width: 124rem;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(40rem, 1fr) 1fr;
         gap: 5rem;
     }
 
+    /* section info */
+
     .info {
         max-width: 124rem;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        grid-template-columns: 42% 1fr;
+        gap: 8rem;
+    }
+
+    .skill__list {
+        margin-bottom: 6rem;
+    }
+
+    .skill__desc {
+        width: 40rem;
+        max-width: 100%;
+        padding-top: 3rem;
+    }
+
+    .about__desc {
+        font-size: 1.7rem;
+        line-height: 1.5;
     }
 
     .about__contact th i {
         margin: 0 1.5rem 0 2rem;
     }
 
-}
-/* large screen */
-@media screen and (min-width: 960px) {
+    /* section contact */
 
+    .contact {
+        max-width: 90rem;
+    }
+
+    .contact h2 {
+        max-width: fit-content;
+        margin: auto;
+    }
+
+    .grid-ctn {
+        margin-top: 7rem;
+        display: grid;
+        grid-template-columns: 35% 1fr;
+        grid-template-rows: minmax(5rem, auto); /* the first row gets higher than expected i dont know why so i have to put this */
+        column-gap: 3rem;
+        grid-template-areas: 
+            "list desc"
+            "list form";
+    }
+
+    .contact__list {
+        grid-area: list;
+        width: 20rem;
+        justify-self: center;
+    }
+
+    .contact__desc {
+        grid-area: desc;
+        width: 70%;
+    }
+
+    .contact form {
+        grid-area: form;
+    }
+
+    .contact__item {
+        margin-bottom: 4.5rem;
+        height: 12rem;
+    }
+    .contact__item i {
+        margin: 3rem 0 1rem 0;
+    }
+
+    .contact form {
+        margin-top: 2rem;
+    }
+
+    .contact label {
+        font-size: 1.3rem;
+        margin-bottom: .3rem;
+    }
+
+    .contact input,
+    .contact textarea {
+        background-color: #333438;
+        padding: 1rem 1rem;
+        margin-bottom: 3rem;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        font-family: "Montserrat", sans-serif;
+        color: lightgrey;
+    }
+
+    .contact input::placeholder {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .contact__form input:hover,
+    .contact__form input:focus,
+    .contact__form textarea:hover,
+    .contact__form textarea:focus {
+        border: 1px solid var(--primary);
+        -webkit-box-shadow: 0px 0px 9px 0px rgba(229,217,28,0.43); 
+    box-shadow: 0px 0px 9px 0px rgba(229,217,28,0.43);
+    }
+
+    .contact__form button::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        margin: auto;
+        background-color: var(--primary);
+        transition: width .3s;
+    }
+    
+    .contact__form button:hover::after {
+        width: 100%;
+    }
+
+    .contact__item a {
+        transition: transform .3s;
+    }
+
+    .contact__item a:focus,
+    .contact__item a:hover,
+    .contact__item a:active {
+        background-color: #e5d91c;
+        color: #333438;
+        transform: scale(115%, 115%);
+    }
 }
+
+/* large desktop */
+@media screen and (min-width: 1490px) {
+    html {
+        font-size: 10px;
+    }
+}
+
 
 /* họ muốn xây lên một tòa tháp mới cao hơn mọi thứ xung quanh 
 nhưng em thấy đấy vẫn chỉ là một bãi lau sậy màu xanhhhhhhhh
