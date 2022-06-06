@@ -215,7 +215,6 @@ span.special {
 
 .hero p.note {
     margin-top: 3rem;
-    color: lightgrey;
 }
 
 .hero__image {
@@ -797,7 +796,7 @@ span.special {
 
     .contact__desc {
         grid-area: desc;
-        width: 85%;
+        width: 70%;
     }
 
     .contact form {
@@ -832,10 +831,6 @@ span.special {
         color: lightgrey;
     }
 
-    .contact textarea {
-        height: 18rem;
-    }
-
     .contact input::placeholder {
         font-family: "Montserrat", sans-serif;
     }
@@ -844,7 +839,6 @@ span.special {
     .contact__form input:focus,
     .contact__form textarea:hover,
     .contact__form textarea:focus {
-        outline: none;
         border: 1px solid var(--primary);
         -webkit-box-shadow: 0px 0px 9px 0px rgba(229,217,28,0.43); 
     box-shadow: 0px 0px 9px 0px rgba(229,217,28,0.43);
@@ -878,7 +872,7 @@ span.special {
 }
 
 /* large desktop */
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1490px) {
     html {
         font-size: 10px;
     }
