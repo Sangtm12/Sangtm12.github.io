@@ -1,5 +1,7 @@
-/* document.querySelector('.btn').addEventListener('click', measureHeight);
-function measureHeight() {
-let height = prompt('xin chào đây là chương trình đo chiều cao bằng công nghệ lượng tử cho độ chính xác đến hàng nghìn mét. Xin mời nhập chiều cao của bạn (đơn vị cm)');
-alert(`Chiều cao của bạn là: ${height}cm.`);
-} */
+const menuInput = document.querySelector('.header input')
+const menuLabel = document.querySelector('.header label')
+
+menuLabel.addEventListener('click', switch);
+function switch() {
+    alert('alo');
+}

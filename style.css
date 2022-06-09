@@ -228,6 +228,11 @@ span.special {
     margin: 17rem auto 0 auto;
     position: relative;
     z-index: 1;
+    transition: transform .15s;
+}
+
+.hero img:hover {
+    transform: translate(-3%, 3%);
 }
 
 .hero__image .square {
@@ -237,7 +242,12 @@ span.special {
     margin: -42.5rem auto 0 auto;
     position: relative;
     left: -2rem;
+    transition: transform .15s;
 } 
+
+.hero__image img:hover ~ .square {
+    transform: translate(7%, -6%);
+}
 
 
 /* || info section */
@@ -575,9 +585,21 @@ span.special {
         font-size: 2rem;
         color: #e5d91c;
     }
+
+    .header .fa-x {
+        display: none;
+    }
+
+    .header input:checked ~ label .fa-x{
+        display: inline;
+    }
+    .header input:checked ~ label .fa-bars{
+        display: none;
+    }
     
     .header input:checked ~ .main {
         max-height: 43rem;
+        border-bottom: 1px solid lightgrey;
     }
     
     .header__menu {
