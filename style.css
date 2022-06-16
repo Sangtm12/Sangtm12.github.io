@@ -5,6 +5,14 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --primary: #e5d91c;
+    --lighter: #333438;
+    --light: #2d2e32;
+    --dark: #25262a;
+    --metaText: lightgrey;
+}
+
 body {
     overflow-x: hidden;
     -ms-overflow-style: none;  /* hides scroll bar for IE and Edge */
@@ -30,11 +38,11 @@ strong {
     font-weight: 600;
 }
 .light {
-    background-color: #2d2e32;
+    background-color: var(--light);
 }
 
 .dark {
-    background-color: #25262a;
+    background-color: var(--dark);
 }
 
 .sct-fixed {
@@ -52,15 +60,15 @@ a {
     display: block;
     max-width: fit-content;
     background-color: transparent;
-    color:#e5d91c;
+    color:var(--primary);
     font-size: 2rem;
     padding: 1.5rem;
-    border: 1px solid #e5d91c;
+    border: 1px solid var(--primary);
 }
 
 .btn:active {
-    background-color: #e5d91c;
-    color: #2d2e32;
+    background-color: var(--primary);
+    color: var(--light);
     font-weight: 500;
 }
 
@@ -70,7 +78,7 @@ a {
     width: 0;
     height: 1px;
     margin: auto;
-    background-color: #e5d91c;
+    background-color: var(--primary);
     transition: width .3s;
 }
 
@@ -79,12 +87,10 @@ a {
 }
 
 .btn:active::after {
-    background-color: #2d2e32;
+    background-color: var(--light);
 }
 
-:root {
-    --primary: #e5d91c;
-}
+
 
 
 /* ||header */
@@ -121,7 +127,7 @@ a {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background-color: #333438;
+    background-color: var(--lighter);
     position: relative;
 }
 
@@ -171,7 +177,7 @@ a {
 
 .flipcard__front,
 .flipcard__back {
-    color: #2d2e32;
+    color: var(--light);
     background-color: var(--primary);
     border-radius: .3rem;
     position: absolute;
@@ -204,7 +210,7 @@ span.special {
 }
 
 .hero .desc {
-    color: lightgray;
+    color: var(--metaText);
     margin-top: 3rem;
     width: 75%;
 }
@@ -215,7 +221,7 @@ span.special {
 
 .hero p.note {
     margin-top: 3rem;
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .hero__image {
@@ -280,7 +286,7 @@ span.special {
     width: 100%;
     align-self: flex-end;
     padding-top: 3.5rem;
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .skill__name {
@@ -349,7 +355,7 @@ span.special {
 
 .about__desc {
     margin-top: 3rem;
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .about__contact {
@@ -437,7 +443,7 @@ span.special {
     height: 3rem;
     line-height: 3rem;
     text-align: center;
-    color: #25262a;
+    color: var(--dark);
     font-weight: 700;
     border-radius: 3px;
     justify-self: center;
@@ -472,12 +478,12 @@ span.special {
 
 .place__desc {
     font-size: 1.7rem;
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .task {
     margin: 1.5rem 0 0 1rem;
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .task__list {
@@ -536,18 +542,18 @@ span.special {
 
 .contact form * {
     display: block;
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .contact__desc {
-    color: lightgrey;
+    color: var(--metaText);
 }
 
 .contact input,
 .contact textarea {
     padding: .7rem;
-    background-color: #2d2e32;
-    border: 1px solid lightgrey;
+    background-color: var(--light);
+    border: 1px solid var(--metaText);
     border-radius: 3px;
     resize: none;
     width: 100%;
@@ -575,7 +581,7 @@ span.special {
         margin-left: auto;
         padding: 0 1rem;
         font-size: 2rem;
-        color: #e5d91c;
+        color: var(--primary);
     }
 
     .header .fa-x {
@@ -608,7 +614,7 @@ span.special {
         content: "";
         width: 100%;
         height: 1px;
-        background-color: lightgrey;
+        background-color: var(--metaText);
         display: block;
         position: absolute;
         bottom: -2rem;
@@ -857,13 +863,13 @@ span.special {
 
     .contact input,
     .contact textarea {
-        background-color: #333438;
+        background-color: var(--lighter);
         padding: 1rem 1rem;
         margin-bottom: 3rem;
-        border: 1px solid lightgrey;
+        border: 1px solid var(--metaText);
         border-radius: 3px;
         font-family: "Montserrat", sans-serif;
-        color: lightgrey;
+        color: var(--metaText);
     }
 
     .contact textarea {
@@ -905,8 +911,8 @@ span.special {
     .contact__item a:focus,
     .contact__item a:hover,
     .contact__item a:active {
-        background-color: #e5d91c;
-        color: #333438;
+        background-color: var(--primary);
+        color: var(--light);
         transform: scale(115%, 115%);
     }
 }
