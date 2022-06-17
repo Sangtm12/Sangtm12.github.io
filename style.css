@@ -122,7 +122,7 @@ a {
     transform: rotate(720deg);
 }
 
-.header__mail a {
+.header__theme  {
     display: block;
     width: 5rem;
     height: 5rem;
@@ -131,7 +131,7 @@ a {
     position: relative;
 }
 
-.header__mail a i {
+.header__theme  i {
     font-size: 2rem;
     position: absolute;
     top: 50%;
@@ -139,7 +139,7 @@ a {
     transform: translate(-50%, -50%)
 }
 
-.header__mail a:hover {
+.header__theme:hover {
     color: var(--primary);
 }
 
@@ -639,7 +639,7 @@ span.special {
         right: 0px;
     }
 
-    .header__mail {
+    .header__theme {
         position: absolute;
         bottom: 0;
         right: 0;

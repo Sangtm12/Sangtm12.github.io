@@ -2,16 +2,26 @@ const btn1 = document.querySelector('.hero .btn');
 const ele = document.querySelector(':root');
 const cs = getComputedStyle(ele);
 
+function random(num) {
+    return Math.floor(Math.random()*num + 1);
+}
+let currentColor = cs.getPropertyValue('--primary');
 
 function change() {
-    if (cs.getPropertyValue('--primary') === '#e5d91c') {
-        changeToWhite();
+    const randomColor = `rgb(${random(255)},${random(255)},${random(255)})`;
+    if (currentColor === ' #e5d91c') {
+        ele.style.setProperty('--primary', randomColor)
     } else {
-        changeToBlack();
+        ele.style.setProperty('--primary',' #e5d91c')
     }
+    currentColor = cs.getPropertyValue('--primary');
+    //this getPropertyValue thing seems to work only once, so if i dont include the above line, it is always the default yellow color
 }
 
-function changeToWhite() {
+const themeBtn = document.getElementById('theme');
+themeBtn.addEventListener('click', change);
+
+/* function changeToWhite() {
     ele.style.setProperty('--primary','red');
     ele.style.setProperty('--lighter','white');
     ele.style.setProperty('--light','lightgrey');
@@ -28,3 +38,4 @@ function changeToBlack() {
     ele.style.setProperty('--metaText','lightgrey');
     ele.style.setProperty('color','white');
 }
+ */
