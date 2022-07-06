@@ -323,11 +323,11 @@ span.special {
 }
 
 .skill2 {
-    width: calc(100% / 5 * 0.5);
+    width: calc(100% / 5 * 3);
 }
 
 .skill3 {
-    width: calc(100% / 5 * 4.5);
+    width: calc(100% / 5 * 3);
 }
 
 /* info about */
