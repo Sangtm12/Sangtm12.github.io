@@ -319,11 +319,11 @@ span.special {
 }
 
 .skill1 {
-    width: calc(100% / 5 * 3.5);
+    width: calc(100% / 5 * 4);
 }
 
 .skill2 {
-    width: calc(100% / 5 * 3);
+    width: calc(100% / 5 * 4);
 }
 
 .skill3 {

@@ -1,4 +1,3 @@
-const btn1 = document.querySelector('.hero .btn');
 const ele = document.querySelector(':root');
 const cs = getComputedStyle(ele);
 
