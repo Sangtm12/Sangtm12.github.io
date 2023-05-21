@@ -1,6 +1,6 @@
 const ele = document.querySelector(':root');
 const cs = getComputedStyle(ele);
-
+console.log('???')
 function random(num) {
     return Math.floor(Math.random()*num + 1);
 }
