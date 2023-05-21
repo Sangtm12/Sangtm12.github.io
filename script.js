@@ -1,12 +1,13 @@
 const ele = document.querySelector(':root');
 const cs = getComputedStyle(ele);
-console.log('???')
+
 function random(num) {
     return Math.floor(Math.random()*num + 1);
 }
 let currentColor = cs.getPropertyValue('--primary');
 
 function change() {
+    console.log('???');
     const randomColor = `rgb(${random(255)},${random(255)},${random(255)})`;
     if (currentColor === ' #e5d91c') {
         ele.style.setProperty('--primary', randomColor)
