@@ -7,12 +7,11 @@ function random(num) {
 let currentColor = cs.getPropertyValue('--primary');
 
 function change() {
-    console.log('???');
     const randomColor = `rgb(${random(255)},${random(255)},${random(255)})`;
-    if (currentColor === ' #e5d91c') {
+    if (currentColor === '#e5d91c') {
         ele.style.setProperty('--primary', randomColor)
     } else {
-        ele.style.setProperty('--primary',' #e5d91c')
+        ele.style.setProperty('--primary','#e5d91c')
     }
     currentColor = cs.getPropertyValue('--primary');
     //this getPropertyValue thing seems to work only once, so if i dont include the above line, it is always the default yellow color
