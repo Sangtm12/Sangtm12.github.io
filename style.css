@@ -972,6 +972,12 @@ span.special {
     border-radius: .5rem;
 }
 
+.prj__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .prj__info {
     grid-area: info;
 }
