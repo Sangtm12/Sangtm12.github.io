@@ -52,10 +52,9 @@ strong {
 }
 
 /* width */
-::-webkit-scrollbar {
-  width: .9rem;
+.task-ctn::-webkit-scrollbar {
+    width: .9rem;
 }
-
 
 ::-webkit-scrollbar-thumb {
   background: rgba(180,180,180,1);
@@ -75,8 +74,8 @@ section.bg::before {
     position: absolute;
     background-image: url(bg-1080.png);
     background-size: cover;
-    background-position: 0 50%;
-    filter: blur(4px) brightness(.7);
+    background-position: 0 60%;
+    filter: blur(4px) brightness(.6);
     transform: scale(100%);
     z-index: -10;
 }
@@ -89,7 +88,7 @@ section.bg::before {
     filter: none;
     background-size: cover;
     background-position: 50% 50%;
-    padding: 1px 5rem;
+    padding: 1px 0;
 }
 
 h2.title {
@@ -98,7 +97,7 @@ h2.title {
     text-align: center;
     text-transform: uppercase;
     margin: 3rem 0;
-    letter-spacing: .5rem;
+    letter-spacing: 1rem;
 }
 
 .add-new {
@@ -106,12 +105,14 @@ h2.title {
     text-align: center;
     position: relative;
     border-radius: 1rem;
+    width: 90%;
+    margin: auto;
 }
 
 .add-new button {
     display: block;
     position: absolute;
-    right: 10%;
+    right: 4%;
     bottom: 2rem;
     background-color: #0652c4;
     font-family: 'Montserrat';
@@ -125,6 +126,7 @@ h2.title {
 
 #msg {
     width: 90%;
+    height: 5rem;
     margin: 5% auto 10% auto;
     background-color: var(--dark);
     resize: none;
@@ -141,26 +143,65 @@ h2.title {
 .task-ctn {
     border-top: 1px solid rgba(250,250,250,.6);
     margin-top: 3rem;
-    height: 40%;
+    height: 65%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    padding: 0;
 }
 
 .task {
     background-color: var(--dark);
+    width: 90%;
+    margin: auto;
     display: flex;
     margin-top: 2rem;
     border-radius: 1rem;
     justify-content: flex-start;
     align-items: stretch;
+    min-height: 7.1rem;
+    position: relative;
+    overflow: visible;
+}
+
+.position {
+    position: absolute;
+    right: -3rem;
+
+}
+
+.task:hover .position i{
+    opacity: 1;
+    color: rgba(255,255,255,.6);
+}
+
+.position i {
+    display: block;
+    width: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+    opacity: 0;
+    transform: none;
+    transition: transform .2s, opacity .2s;
+}
+
+.position i:hover {
+    color: white!important;
+    transform: scale(160%);
 }
 
 .checkbox-ctn {
-    padding: 0 2.5rem;
-    height: 100%;
+    flex: 0 0 7rem;
+    position: relative;
+    text-align: center;
 }
 
 input.checkbox {
     opacity: 1;
-    position: relative;
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
 }
 
 input.checkbox::before {
@@ -170,27 +211,109 @@ input.checkbox::before {
     width: 2rem;
     height: 2rem;
     position: absolute;
-    top: 0;
-    background-color: var(--lighter);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--dark);
+    border: 1px solid darkgrey;
+    border-radius: .4rem;
     z-index: 1000;
 }
 
-.task-title-ctn {
-    display: flex;
-    align-items: center;
+input.checkbox:hover::before {
+    background-color: var(--lighter);
+    box-shadow: #333438 0px 0px 3px 5px;
 }
 
 
+
+.task-title-ctn {
+    /* max-width: 303px; */
+    flex: 1000 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem 1.5rem 0;
+    min-width: 0; /* THE GOLDEN LINE*/
+}
+
+.task-title {
+    text-overflow: ellipsis;
+    white-space: nowrap; /* keeps the text in a single line */
+    overflow: hidden; /* keeps the element from overflowing its parent */
+}
+
+.options {
+    flex: 0 1 0;
+    position: relative;
+    overflow: hidden;
+    transition: flex-basis .3s ease-in-out;
+}
+
+.menu-icon {
+    flex: 1 0 6.3rem;
+    position: relative;
+    overflow: hidden;
+    transition: flex .4s;
+}
+
+.menu-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task:hover .menu-icon {
+    flex: 1 1 0rem;
+    opacity: 0;
+}
+
+.task:hover .options {
+    flex: 1 0 13.7rem;
+}
 
 .options i {
     font-size: 2rem;
     padding: 2.5rem;
+    position: absolute;
 }
 
 i.fa-pen-to-square {
-    background-color: var(--light)
+    background-color: var(--light);
+    left: 0;
 }
 
 i.fa-trash {
     background-color: #f72d2d;
+    right: 0;
+}
+
+.task.done .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task.done input.checkbox::before {
+    background-color: var(--dark);
+    box-shadow: none;
+    border: 1px solid #666;
+}
+
+.task.done input.checkbox::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: .7rem;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    border-left: 3px solid #666;
+    border-bottom: 3px solid #666;
+    z-index: 1001;
+}
+
+.task.focus {
+    border: 1px solid lightgrey;
+    box-shadow: 0 0 5px 5px rgba(100,100,100,.4);
 }
