@@ -1,17 +1,23 @@
 const input = document.querySelector('#msg');
 const addButton = document.querySelector('.add-new button');
-const taskArray = JSON.parse(localStorage.getItem('taskArray')) || [];
+let taskArray = JSON.parse(localStorage.getItem('taskArray')) || [];
 const taskCtn = document.querySelector('.task-ctn');
 
+document.querySelector('.clear').addEventListener('click', () => {
+    window.localStorage.removeItem('taskArray');
+    taskArray = [];
+    draw();
+})
 
+draw();
 
 // ADD NEW TASK
 
 addButton.addEventListener('click', verifyMsg);
 
-function verifyMsg() {
-    let msg = input.value;
-    console.log(input.value);
+function verifyMsg(e) {
+    const msg = input.value;
+    input.value = '';
     if (msg == '') {
         input.setAttribute('placeholder','Text must not be empty!')
     } else {
@@ -52,15 +58,19 @@ function draw() {
                 </div>
         ` + taskCtn.innerHTML;
     });
-    document.querySelectorAll('.checkbox').forEach((item) => {
-        item.addEventListener('click', changeStatus);
-    });
-    document.querySelectorAll('i.fa-pen-to-square').forEach(item => {
-        item.addEventListener('click', editTask);
-    });
-    document.querySelectorAll('i.fa-trash').forEach(item => {
-        item.addEventListener('click', removeTask);
-    })
+
+    function assignButton(selector, callback) {
+        document.querySelectorAll(selector).forEach(item => {item.addEventListener('click', callback);})
+    }
+
+    assignButton('.checkbox', changeStatus);
+    assignButton('i.fa-pen-to-square', editTask);
+    assignButton('i.fa-trash', removeTask);
+    assignButton('i.fa-caret-up', moveUp);
+    assignButton('i.fa-caret-down', moveDown);
+    if (taskArray.length !== 0) {
+        window.localStorage.setItem('taskArray', JSON.stringify(taskArray));
+    }
 }
 
 //CHANGE STATUS - MARK AS DONE
@@ -89,25 +99,28 @@ function editTask(event) {
     input.focus();
     input.value = task.querySelector('.task-title').innerText;
     addButton.removeEventListener('click', verifyMsg);
-    addButton.addEventListener('click', ()=> {updateTask(task)});
+    addButton.addEventListener('click', updateTask);
+    addButton.innerText = 'Update';
 }
 
-function updateTask(task) {
+function updateTask(event) {
+    let task = document.querySelector('.task.focus')
     let msg = input.value;
     if (msg == '') {
         input.setAttribute('placeholder','Text must not be empty!')
     } else {
-        for (let i = 0; i < taskArray.length; i++) {
-            if (task.querySelector('.task-title').innerText == taskArray[i]) {
-                taskArray.splice(i,1, msg);
+        document.querySelectorAll('.task').forEach((item, index)=>{
+            if (item == task) {
+                taskArray.splice(taskArray.length - 1 - index, 1, msg);
             }
-        }
+        })
         draw();
         task.classList.remove('focus');
-        input.value = '';
         input.focus();
+        addButton.removeEventListener('click', updateTask);
         addButton.addEventListener('click', verifyMsg);
-        // error cho nay cai verifyMsg khong bat duoc input.value
+        addButton.innerText = 'Add task';
+        document.querySelector('#msg').value = '';
     }
 } 
 
@@ -122,6 +135,38 @@ function removeTask(event) {
     }
     draw();
     input.focus();
+}
+
+//move task
+
+function moveUp(event) {
+    let task = event.target.parentNode.parentNode;
+    for (let i = 0; i < taskArray.length; i++) {
+        if (task.querySelector('.task-title').innerText == taskArray[i]) {
+            if (i == taskArray.length - 1) {
+                return;
+            } else {
+                console.log(i);
+                taskArray.splice(i+1, 0, taskArray.splice(i, 1));
+                draw();
+                break;
+            }
+        }
+    }
+}
+
+function moveDown(event) {
+    let task = event.target.parentNode.parentNode;
+    for (let i = 0; i < taskArray.length; i++) {
+        if (task.querySelector('.task-title').innerText == taskArray[i]) {
+            if (i == 0) {
+                return;
+            } else {
+                taskArray.splice(i-1, 0, taskArray.splice(i, 1));
+                draw();
+            }
+        }
+    };
 }
 
 

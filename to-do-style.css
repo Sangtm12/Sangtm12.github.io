@@ -91,12 +91,21 @@ section.bg::before {
     padding: 1px 0;
 }
 
+.note {
+    color: var(--dark);
+    max-width: 50rem;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
 h2.title {
     color: var(--dark);
     font-size: 5rem;
     text-align: center;
     text-transform: uppercase;
-    margin: 3rem 0;
+    margin: 3rem 0 1rem 0;
     letter-spacing: 1rem;
 }
 
@@ -124,6 +133,10 @@ h2.title {
     cursor: pointer;
 }
 
+.add-new button:hover {
+    background-color: #0046b8;
+}
+
 #msg {
     width: 90%;
     height: 5rem;
@@ -140,12 +153,27 @@ h2.title {
     outline: none;
 }
 
+.clear {
+    position: absolute;
+    left: 4%;
+    bottom: 2rem;
+    color: #aaa;
+    border: 1px solid #aaa;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+}
+
+.clear:hover {
+    cursor: pointer;
+    background-color: var(--lighter);
+}
+
 .task-ctn {
     border-top: 1px solid rgba(250,250,250,.6);
     margin-top: 3rem;
     height: 65%;
     overflow-y: scroll;
-    overflow-x: visible;
+    overflow-x: hidden;
     padding: 0;
 }
 
