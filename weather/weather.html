@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marshall's Portfolio</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="weather.css">
+    <script src="https://kit.fontawesome.com/2137715c67.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<script src="weather.js" defer></script>
+</head>
+<body>
+    <section class="weather-app">
+        <div class="weather-ctn">
+            <div class="search">
+                <form class="search__form">
+                    <input type="text" placeholder="Search city...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <p class="or">Or</p>
+                <button id="gps">Use your location</button>
+            </div>
+            <div class="today">
+                <div class="today__location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="today__location__info">
+                        <p class="city-output">Kuala Lumpur</p>
+                        <p class="current-time">Sun, Jun 4 - 5:17 PM</p>
+                    </div>
+                </div>
+                <div class="today__weather">
+                    <div class="today__weather__temp">32<span class="today__weather__unit">&deg;C</span></div>
+                    <div class="today__weather__icon"><i class="fa-solid fa-sun"></i></div>
+                </div>
+                <div class="today__desc">Mostly cloudy &#x2022; Feels like 30&deg;C</div>
+                <div class="today__last-updated"><i class="fa-sharp fa-solid fa-rotate-right"></i><span>Last updated 30 minutes ago</span></div>
+            </div>
+            <div class="hourly">
+                <p class="hourly__title">Every 3 hours</p>
+                <div class="hourly__chart">
+                    <div class="chart--item" style="clip-path: polygon(0 20%, 100% 10%, 100% 100%, 0 100%)"></div>
+                    <div class="chart--item"></div>
+                    <div class="chart--item"></div>
+                    <div class="chart--item"></div>
+                    <div class="chart--item"></div>
+                </div>
+                <div class="hourly__time">
+                    <div class="time__item"><p class="time__text">6pm</p></div>
+                    <div class="time__item"><p class="time__text">7pm</p></div>
+                    <div class="time__item"><p class="time__text">8pm</p></div>
+                    <div class="time__item"><p class="time__text">9pm</p></div>
+                    <div class="time__item"><p class="time__text">10pm</p></div>
+                    <div class="time__item"><p class="time__text">11pm</p></div>
+                </div>
+            </div>
+            <div class="daily">
+                <p class="daily__title">Daily</p>
+                <div class="daily__day__ctn">
+                    <div class="daily__day">
+                        <div class="daily__day__title">TODAY</div>
+                        <div class="daily__day__icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div class="daily__day__lohi">
+                            <span class="deg-low">24/</span>
+                            <span class="deg-high">32&deg;C</span>
+                        </div>
+                    </div>
+                    <div class="daily__day">
+                        <div class="daily__day__title">TODAY</div>
+                        <div class="daily__day__icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div class="daily__day__lohi">
+                            <span class="deg-low">24/</span>
+                            <span class="deg-high">32&deg;C</span>
+                        </div>
+                    </div>
+                    <div class="daily__day">
+                        <div class="daily__day__title">TODAY</div>
+                        <div class="daily__day__icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div class="daily__day__lohi">
+                            <span class="deg-low">24/</span>
+                            <span class="deg-high">32&deg;C</span>
+                        </div>
+                    </div>
+                    <div class="daily__day">
+                        <div class="daily__day__title">TODAY</div>
+                        <div class="daily__day__icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div class="daily__day__lohi">
+                            <span class="deg-low">24/</span>
+                            <span class="deg-high">32&deg;C</span>
+                        </div>
+                    </div>
+                    <div class="daily__day">
+                        <div class="daily__day__title">TODAY</div>
+                        <div class="daily__day__icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div class="daily__day__lohi">
+                            <span class="deg-low">24/</span>
+                            <span class="deg-high">32&deg;C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

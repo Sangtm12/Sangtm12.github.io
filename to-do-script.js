@@ -35,7 +35,7 @@ function addTask(msg) {
 
 function draw() {
     taskCtn.innerHTML = '';
-    taskArray.forEach((item,index) => {
+    taskArray.forEach((item) => {
         taskCtn.innerHTML = `
         <div class="task ongoing">
                     <div class="checkbox-ctn">
