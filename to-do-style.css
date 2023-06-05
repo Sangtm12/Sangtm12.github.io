@@ -157,7 +157,7 @@ h2.title {
 #msg {
     width: 90%;
     height: 5rem;
-    margin: 5% auto 10% auto;
+    margin: 2rem auto 9rem auto;
     background-color: var(--dark);
     resize: none;
     color: white;
@@ -168,6 +168,7 @@ h2.title {
 #msg:focus-visible {
     border: none;
     outline: none;
+    box-shadow: none;
 }
 
 .clear {

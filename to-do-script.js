@@ -1,5 +1,6 @@
 const input = document.querySelector('#msg');
 const addButton = document.querySelector('.add-new button');
+const form = document.querySelector('form.add-new');
 let taskArray = JSON.parse(localStorage.getItem('taskArray')) || [];
 const taskCtn = document.querySelector('.task-ctn');
 
@@ -13,9 +14,11 @@ draw();
 
 // ADD NEW TASK
 
-addButton.addEventListener('click', verifyMsg);
+form.addEventListener('submit',verifyMsg);
 
 function verifyMsg(e) {
+    e.preventDefault();
+    console.log('vrf');
     const msg = input.value;
     input.value = '';
     if (msg == '') {
@@ -98,12 +101,13 @@ function editTask(event) {
     task.classList.add('focus');
     input.focus();
     input.value = task.querySelector('.task-title').innerText;
-    addButton.removeEventListener('click', verifyMsg);
-    addButton.addEventListener('click', updateTask);
+    form.removeEventListener('submit',verifyMsg);
+    form.addEventListener('submit',updateTask)
     addButton.innerText = 'Update';
 }
 
-function updateTask(event) {
+function updateTask(e) {
+    e.preventDefault();
     let task = document.querySelector('.task.focus')
     let msg = input.value;
     if (msg == '') {
@@ -117,8 +121,8 @@ function updateTask(event) {
         draw();
         task.classList.remove('focus');
         input.focus();
-        addButton.removeEventListener('click', updateTask);
-        addButton.addEventListener('click', verifyMsg);
+        form.removeEventListener('submit', updateTask);
+        form.addEventListener('submit', verifyMsg);
         addButton.innerText = 'Add task';
         document.querySelector('#msg').value = '';
     }

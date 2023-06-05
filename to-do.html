@@ -20,11 +20,11 @@
             <a href="/" class="back"><i class="fa-solid fa-caret-left"></i> Back</a>
             <h2 class="title">To do list</h2>
             <p class="note">This app uses Local Storage to store data. Kindly press the button "Clear Local Storage" before you leave.</p>
-            <div class="add-new">
-                <textarea name="mgs" id="msg" cols="30" rows="10" placeholder="Add a new task..."></textarea>
+            <form class="add-new">
+                <input name="task-name" id="msg" type="text" placeholder="Add a new task..."></input>
                 <p class="clear">Clear Local Storage</p>
-                <button type="button">Add task</button>
-            </div>
+                <button type="submit">Add task</button>
+            </form>
             <div class="task-ctn">
             </div>
         </div>
