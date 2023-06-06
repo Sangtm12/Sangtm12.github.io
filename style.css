@@ -310,6 +310,11 @@ span.special {
     color: var(--metaText);
 }
 
+.skill__desc a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 .skill__name {
     font-size: 2rem;
     font-weight: 500;
