@@ -341,6 +341,14 @@ button#gps:hover::after {
     margin-bottom: 2rem;
 }
 
+.deg-low {
+    font-size: .9rem;
+}
+
+.deg-high {
+    font-size: 1.1rem;
+}
+
 
 
 
