@@ -54,6 +54,7 @@ section#tic-tac-toe {
     margin: auto;
     overflow: hidden;
     text-align: center;
+    padding-top: 6rem;
 }
 
 .title {
@@ -115,12 +116,16 @@ section#tic-tac-toe {
     background-color: var(--bg-lighter);
 }
 
-.space p {
+.space i {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+i.fa-o {
+    font-size: 7.5rem;
 }
 
 
@@ -153,4 +158,56 @@ button {
 button:hover {
     background-color: #f7b654;
     outline: 1px solid white;
+}
+
+.options-ctn {
+    position: absolute;
+    width: min(600px, 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--bg);
+    border: 2px solid white;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.options fieldset {
+    border: none;
+}
+
+.options legend {
+    font-size: 4rem;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+.options input {
+    display: none;
+}
+
+.options label {
+    display: inline-block;
+    font-size: 3rem;
+    padding: 1rem 3rem;
+    min-width: 10rem;
+    border: 1px solid white;
+    margin-bottom: 7rem;
+}
+
+.options input:checked + label {
+    background-color: white;
+    color: var(--bg);
+    font-weight: 600;
+}
+
+.options label:nth-child(3) {
+    margin-right: 2rem;
+}
+
+p.error {
+    font-size: 2rem;
+}
+
+.options button {
+    margin-bottom: 7rem;
 }

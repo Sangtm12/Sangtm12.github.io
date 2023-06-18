@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tic-tac-toe.css">
-    <script src="tic-tac-toe.js" defer></script>
+    <script src="game.js" defer></script>
+    <script src="board.js" defer></script>
+    <script src="space.js" defer></script>
+    <script src="app.js" defer></script>
     <title>Tic-tac-toe</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2137715c67.js" crossorigin="anonymous"></script>
@@ -24,8 +27,8 @@
                 <div class="computer icon"><i class="fa-sharp fa-solid fa-desktop"></i></div>
             </div>
             <div class="board">
-                <div class="space"><p>X</p></div>
-                <div class="space"><p>O</p></div>
+                <!-- <i class="fa-sharp fa-solid fa-o"></i>
+                <i class="fa-solid fa-xmark"></i>
                 <div class="space"></div>
                 <div class="space"></div>
                 <div class="space"></div>
@@ -33,9 +36,31 @@
                 <div class="space"></div>
                 <div class="space"></div>
                 <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div> -->
             </div>
             <div class="noti"><p class="noti-text"></p></div>
             <button type="button">New Game</button>
+        </div>
+        <div class="options-ctn">
+            <form action="#" method="POST" class="options">
+                <fieldset>
+                    <legend>Select grid</legend>
+                    <input type="radio" name="grid" id="3x3" value="3x3">
+                    <label for="3x3">3x3</label>
+                    <input type="radio" name="grid" id="15x15" value="15x15">
+                    <label for="15x15">15x15</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Select difficulty</legend>
+                    <input type="radio" name="difficulty" id="normal" value="normal">
+                    <label for="normal">normal</label>
+                    <input type="radio" name="difficulty" id="impossible" value="impossible">
+                    <label for="impossible">impossible</label>
+                </fieldset>
+                <p class="error"></p>
+                <button type="submit">Start game</button>
+            </form>
         </div>
     </section>
 </body>
