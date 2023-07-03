@@ -1,12 +1,14 @@
 class Space {
-    constructor(x) {
-        this.index = x;
-    }
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    draw() {
-        let space = document.createElement('div');
-        space.classList.add('space');
-        space.setAttribute('data-index',this.index);
-        document.querySelector('.board').appendChild(space);
-    }
+  draw() {
+    let space = document.createElement("div");
+    space.classList.add("space");
+    space.setAttribute("data-x", this.x);
+    space.setAttribute("data-y", this.y);
+    document.querySelector(".board").appendChild(space);
+  }
 }

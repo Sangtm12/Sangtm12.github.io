@@ -1,15 +1,17 @@
 class Board {
-    spaceArray = [];
-    
-    constructor(grid) {
-        this.grid = grid;
-    }
+  spaceArray = [];
 
-    createSpaces() {
-        for (let x = 0; x < Math.pow(this.grid, 2); x++) {
-            let space = new Space(x);
-            this.spaceArray.push(space);
-            space.draw();
-        }
+  constructor(grid) {
+    this.grid = grid;
+  }
+
+  createSpaces() {
+    for (let y = 0; y < this.grid; y++) {
+      for (let x = 0; x < this.grid; x++) {
+        let space = new Space(x, y);
+        this.spaceArray.push(space);
+        space.draw();
+      }
     }
+  }
 }
