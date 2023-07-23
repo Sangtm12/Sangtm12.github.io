@@ -32,7 +32,7 @@ function addTask(msg) {
   input.value = "";
   input.focus();
   input.setAttribute("placeholder", "Add a new task...");
-  taskArray.shift(msg);
+  taskArray.unshift(msg);
   draw();
 }
 
