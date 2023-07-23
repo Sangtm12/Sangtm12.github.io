@@ -60,6 +60,10 @@ class Game {
     let availableSlots = this.board.spaceArray.filter(
       (slot) => slot.marked === undefined
     );
+
+    function minimax() {}
+
+    //start of the RANDOM bullshit
     let randomIndex = Math.floor(Math.random() * availableSlots.length);
     this.board.spaceArray.find(
       (item) =>
