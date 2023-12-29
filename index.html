@@ -238,8 +238,9 @@
                     <li class="contact__item"><a href="tel:0846245845"><i class="fa-solid fa-phone-flip"></i>Phone</a></li>
                     <li class="contact__item"><a href="https://m.me/tranminh.sang.351" target="_blank"><i class="fa-brands fa-facebook-messenger"></i>Messenger</a></li>
                 </ul>
-                <em class="contact__desc">The buttons work but the form is just for visualization.</em>
-                <form action="" method="get" class="contact__form">
+                <em class="contact__desc" style="display: none">The buttons work but the form is just for visualization.</em>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+                    <input type="hidden" name="access_key" value="f7fe477e-6564-48c6-b165-5b4775211021">
                     <label for="name">Your name</label>
                     <input type="text" name="name" id="name" class="name">
                     <label for="email">Your email</label>

@@ -18,7 +18,6 @@ form.addEventListener("submit", verifyMsg);
 
 function verifyMsg(e) {
   e.preventDefault();
-  console.log("vrf");
   const msg = input.value;
   input.value = "";
   if (msg == "") {
